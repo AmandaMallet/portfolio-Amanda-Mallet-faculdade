@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Amanda Mallet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="tema-claro">
+
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Menu principal">
+
+            <button class="menu-mobile" id="menuMobile">
+                ☰
+            </button>
+
+            <ul class="menu" id="menu">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <!-- Switch tema -->
+            <label class="switch">
+                <input id="alternarTema" class="switch__input" type="checkbox" role="switch"
+                    aria-label="Alternar tema" />
+
+                <span class="switch__icon">
+                    <span class="switch__icon-part switch__icon-part--1"></span>
+                    <span class="switch__icon-part switch__icon-part--2"></span>
+                    <span class="switch__icon-part switch__icon-part--3"></span>
+                    <span class="switch__icon-part switch__icon-part--4"></span>
+                    <span class="switch__icon-part switch__icon-part--5"></span>
+                    <span class="switch__icon-part switch__icon-part--6"></span>
+                    <span class="switch__icon-part switch__icon-part--7"></span>
+                    <span class="switch__icon-part switch__icon-part--8"></span>
+                    <span class="switch__icon-part switch__icon-part--9"></span>
+                    <span class="switch__icon-part switch__icon-part--10"></span>
+                    <span class="switch__icon-part switch__icon-part--11"></span>
+                </span>
+            </label>
+
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__conteudo">
+                <h1>Amanda Mallet</h1>
+                <p>Desenvolvedora Front-End • Vue.js • UI & Design Lover</p>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <h2>Sobre Mim</h2>
+
+            <p>
+                Meu nome é Amanda Mallet e sou desenvolvedora front-end júnior.
+                Trabalho com desenvolvimento de interfaces para e-commerce,
+                criando experiências visuais bonitas, intuitivas e funcionais.
+            </p>
+
+            <p>
+                Sou apaixonada pela parte visual da programação, especialmente
+                pelo equilíbrio entre design e código.
+            </p>
+
+            <h3>Hobbies</h3>
+
+            <p>
+                Nas horas vagas gosto de pintar com guache, desenhar, ler e ir à praia.
+            </p>
+
+            <div class="galeria-pinturas">
+                <img src="img/pintura1.jpg" alt="Pintura 1">
+                <img src="img/pintura2.jpg" alt="Pintura 2">
+                <img src="img/pintura3.jpg" alt="Pintura 3">
+                <img src="img/pintura4.jpg" alt="Pintura 4">
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="section">
+            <h2>Formação</h2>
+
+            <article class="bloco-formacao">
+                <h3>Graduação</h3>
+                <p>Engenharia de Software - Uninter (2025 - atual)</p>
+            </article>
+
+            <article class="bloco-formacao">
+                <h3>Curso Técnico</h3>
+                <p>Técnico em Desenvolvimento de Sistemas - Sesi/Senai</p>
+            </article>
+
+            <article class="bloco-formacao">
+                <h3>Cursos</h3>
+                <p>Lógica de programação, robótica, HTML, CSS, JavaScript e Vue.js</p>
+            </article>
+
+            <article class="bloco-formacao">
+                <h3>Idiomas</h3>
+                <p>Português (nativo) • Inglês (intermediário) • Espanhol (Básico)</p>
+            </article>
+        </section>
+
+        <!-- PORTFÓLIO -->
+        <section id="portfolio" class="section">
+            <h2>Portfólio</h2>
+
+            <div class="cards-projetos">
+
+                <article class="card-projeto">
+                    <div class="imagem-placeholder">
+                        <img src="imgs/logo-hocks.svg" alt="Logo Hocks" />
+                    </div>
+                    <h3>Hocks</h3>
+                    <a href="https://www.hocks.com.br" target="_blank">
+                        www.hocks.com.br
+                    </a>
+                </article>
+
+                <article class="card-projeto">
+                    <div class="imagem-placeholder">Logo</div>
+                    <h3>Projeto 2</h3>
+                    <a href="#" target="_blank">Link do projeto</a>
+                </article>
+
+                <article class="card-projeto">
+                    <div class="imagem-placeholder">Logo</div>
+                    <h3>Projeto 3</h3>
+                    <a href="#" target="_blank">Link do projeto</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+            <h2>Contato</h2>
+
+            <form id="formContato" class="formulario-contato">
+
+                <div class="campo-formulario">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+
+            <p id="mensagemStatus"></p>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
