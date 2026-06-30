@@ -258,100 +258,76 @@ button[type="submit"] {
 .tema-escuro .menu a {
     color: #dce6ff;
 }
+/* ===========================
+   Alternador de tema
+=========================== */
 
-/* SWITCH */
-
-.switch,
-.switch__input {
-    position: relative;
-}
-
-.switch__input,
-.switch__input:before {
-    background-color: hsl(var(--hue),10%,10%);
-}
-
-.switch__input {
-    border-radius: 0.75em;
+.alternador-tema {
+    display: inline-flex;
     cursor: pointer;
-    display: block;
-    width: 3em;
-    height: 1.5em;
-    transition: background-color var(--trans-dur) var(--trans-timing);
-    appearance: none;
-    border: none;
 }
 
-.switch__input:before {
-    border-radius: 50%;
+.alternador-tema__input {
+    display: none;
+}
+
+.alternador-tema__botao {
+    width: 60px;
+    height: 32px;
+    background: #d8d8d8;
+    border-radius: 999px;
+    position: relative;
+    transition: .3s;
+}
+
+.alternador-tema__botao::before {
     content: "";
-    display: block;
     position: absolute;
-    top: 0.125em;
-    left: 0.125em;
-    width: 1.25em;
-    height: 1.25em;
-    transition: transform var(--trans-dur) var(--trans-timing);
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    transition: .3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 
-.switch__icon,
-.switch__icon-part {
-    display: block;
+.icone {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    transition: opacity .25s;
 }
 
-.switch__icon {
-    background-color: white;
-    border-radius: 50%;
-    overflow: hidden;
-    pointer-events: none;
-    top: 0.125em;
-    left: 0.125em;
-    width: 1.25em;
-    height: 1.25em;
-    transition: transform var(--trans-dur) var(--trans-timing);
+.icone-sol {
+    left: 7px;
+    color: #f4b400;
 }
 
-.switch__icon-part {
-    transition: transform .4s;
+.icone-lua {
+    right: 7px;
+    color: #4b5563;
 }
 
-.switch__icon-part--1,
-.switch__icon-part--2,
-.switch__icon-part--3 {
-    border-radius: 50%;
+/* Tema escuro */
+
+.alternador-tema__input:checked + .alternador-tema__botao {
+    background: #3d4452;
 }
 
-.switch__icon-part--1 {
-    background: white;
-    top: calc(50% - .375em);
-    left: calc(50% - .375em);
-    width: .75em;
-    height: .75em;
+.alternador-tema__input:checked + .alternador-tema__botao::before {
+    transform: translateX(28px);
 }
 
-.switch__icon-part--2 {
-    background: black;
-    top: calc(50% - .4375em);
-    left: calc(50% - .0625em);
-    width: .5em;
-    height: .5em;
-    transform: translate(-.1875em,.1875em) scale(.2);
+.alternador-tema__input:not(:checked) + .alternador-tema__botao .icone-lua {
+    opacity: .35;
 }
 
-.switch__input:checked {
-    background-color: white;
-}
-
-.switch__input:checked:before,
-.switch__input:checked ~ .switch__icon {
-    transform: translateX(1.5em);
-}
-
-.switch__input:checked ~ .switch__icon .switch__icon-part--2 {
-    transform: translate(0,0) scale(1);
+.alternador-tema__input:checked + .alternador-tema__botao .icone-sol {
+    opacity: .35;
 }
 
 /* MOBILE */
