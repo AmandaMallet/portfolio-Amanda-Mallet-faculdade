@@ -18,7 +18,7 @@ menuMobile.addEventListener("click", function () {
    TEMA CLARO / ESCURO
 ========================= */
 
-alternarTema.addEventListener("change", function () {
+alternarTema.addEventListener("change", () => {
     document.body.classList.toggle("tema-escuro");
 });
 
