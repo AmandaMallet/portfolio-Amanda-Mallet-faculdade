@@ -258,6 +258,10 @@ button[type="submit"] {
 .tema-escuro .menu a {
     color: #dce6ff;
 }
+
+.tema-escuro .menu a:hover {
+    background: #171b27;
+}
 /* ===========================
    Alternador de tema
 =========================== */
