@@ -228,6 +228,12 @@ button[type="submit"] {
     color: white;
 }
 
+#mensagemStatus {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
 /* TEMA ESCURO */
 
 .tema-escuro {
